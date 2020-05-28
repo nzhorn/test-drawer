@@ -1,0 +1,16 @@
+<div class="drawer"
+     [style.width]="config.width"
+     [hidden]="!isOpen"
+     [ngClass]="config.position"
+>
+  <ng-container>
+    <div class="drawer-actions">
+      <div class="action-btn" (click)="close()">
+        <i class="material-icons">close</i>
+      </div>
+    </div>
+    <div class="drawer-content" #drawerContentContainer>
+      <ng-template cdkPortalOutlet></ng-template>
+    </div>
+  </ng-container>
+</div>
